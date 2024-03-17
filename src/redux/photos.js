@@ -4,10 +4,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 /** Actions **/
 export const FETCH_PHOTOS = 'FETCH_PHOTOS';
 
-export const fetchPhotos = createAsyncThunk(
-  FETCH_PHOTOS,
-  photosApi.fetchPhotos
-);
+export const fetchPhotos = createAsyncThunk(FETCH_PHOTOS, photosApi.fetchPhotos);
 
 /** Reducer **/
 const { reducer: photosReducer } = createSlice({
@@ -17,8 +14,7 @@ const { reducer: photosReducer } = createSlice({
     data: [],
     error: null,
   },
-  reducers: {},
-  extraReducers: {
+  reducers: {
     [fetchPhotos.pending]: (state, action) => {
       state.loading = 'pending';
     },

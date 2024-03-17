@@ -22,8 +22,7 @@ const { reducer: imageModalReducer } = createSlice({
     src: '',
     alt: '',
   },
-  reducers: {},
-  extraReducers: {
+  reducers: {
     SHOW_MODAL: (state, action) => {
       state.modalVisible = true;
       state.src = action.src;

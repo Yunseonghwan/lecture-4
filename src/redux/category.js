@@ -11,8 +11,7 @@ const { reducer: categoryReducer } = createSlice({
   initialState: {
     category: 'all', // 'random', 'animals', 'food', 'fashion', 'travel'
   },
-  reducers: {},
-  extraReducers: {
+  reducers: {
     SET_CATEGORY: (state, action) => {
       state.category = action.category;
     },

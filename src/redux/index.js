@@ -1,7 +1,7 @@
-import { combineReducers } from 'redux';
 import photosReducer from './photos';
 import categoryReducer from './category';
 import imageModalReducer from './imageModal';
+import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
   photos: photosReducer,
